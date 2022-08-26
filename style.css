@@ -76,7 +76,7 @@ img {
   box-shadow: var(--box-shadow-1);
   max-width: 85%;
   margin: 2rem auto;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .heading {
@@ -85,6 +85,7 @@ img {
   padding: 1rem;
   text-transform: capitalize;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.589);
+  color: blueviolet;
 }
 
 .form {
@@ -123,17 +124,17 @@ input:not(input[type="checkbox"], input[type="radio"]) {
   font-size: 1rem;
   border-radius: 0.3rem;
   text-transform: lowercase;
-  background-color: rgb(31, 30, 30);
   transition: var(--transition-8);
+  border: 1px solid rgba(128, 128, 128, 0.315);
+  background-color: rgb(182, 182, 182);
 }
-
-input::placeholder {
-  background-color: rgb(31, 30, 30);
-  letter-spacing: 1px;
-}
-
-input:focus {
-  background-color: white;
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="email"]:focus,
+input[type="email"]:hover {
+  border: 1px solid blueviolet;
+  background-color: rgb(255, 255, 255);
+  outline-color: blueviolet;
 }
 
 #white,
@@ -189,17 +190,85 @@ input:focus {
   border-color: white;
 }
 
+.row-1 {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 576px) {
   .order-form {
     max-width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-}
-@media only screen and (min-width: 992px) {
-}
-@media only screen and (min-width: 1200px) {
-}
+  .order-form {
+    max-width: 80%;
+  }
 
-@media only screen and (min-width: 1400px) {
+  .form-row {
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+  }
+
+  .col1 {
+    margin: 0;
+    flex: 0 0 49%;
+  }
+
+  .col2 {
+    flex: 0 0 49%;
+    margin: 0;
+  }
+
+  .col3 {
+    margin: 0;
+  }
+  .col-1,
+  .col-2,
+  .col-3 {
+    margin-top: 1rem;
+  }
+
+  .row-color {
+    flex-direction: column;
+  }
+
+  .row-color {
+    display: flex;
+  }
+
+  .row-1 {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .row-2 {
+    display: block;
+    margin: 0;
+  }
+
+  .row-3 {
+    margin-top: 1rem;
+  }
+
+  .row-comments {
+    flex-direction: column;
+  }
+  #comments {
+    width: 600px;
+    height: 100px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .row-last {
+    margin-top: 3rem;
+  }
+
+  .btn {
+    max-width: 200px;
+    border-radius: 0;
+    background-color: whitesmoke;
+  }
 }
