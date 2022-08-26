@@ -45,6 +45,7 @@
 body {
   font-family: var(--regular-font);
   /* font size :16px */
+  background: linear-gradient(220.55deg, #3793ff 0%, #0017e4 100%);
 }
 
 html {
@@ -74,18 +75,22 @@ img {
 .order-form {
   background-color: white;
   box-shadow: var(--box-shadow-1);
-  max-width: 85%;
-  margin: 2rem auto;
+  max-width: 95%;
+  margin: 1rem auto;
   border-radius: 0.4rem;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
 }
 
 .heading {
   font-size: var(--font-size-s-h4);
   letter-spacing: 1px;
   padding: 1rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
   text-transform: capitalize;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.589);
-  color: blueviolet;
+  color: rgb(255, 255, 255);
 }
 
 .form {
@@ -113,7 +118,7 @@ label {
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 0.5rem 0;
-  color: rgb(17, 16, 17);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -126,7 +131,7 @@ input:not(input[type="checkbox"], input[type="radio"]) {
   text-transform: lowercase;
   transition: var(--transition-8);
   border: 1px solid rgba(128, 128, 128, 0.315);
-  background-color: rgb(182, 182, 182);
+  background-color: rgb(255, 255, 255);
 }
 input[type="text"]:focus,
 input[type="text"]:hover,
@@ -155,7 +160,7 @@ input[type="email"]:hover {
 
 .signup {
   font-size: 1rem;
-  color: grey;
+  color: rgb(0, 0, 0);
   margin: 1rem 0;
 }
 
@@ -240,7 +245,7 @@ input[type="email"]:hover {
 
   .row-1 {
     flex-direction: row;
-    gap: 2rem;
+    gap: 0.5rem;
   }
 
   .row-2 {
@@ -256,7 +261,7 @@ input[type="email"]:hover {
     flex-direction: column;
   }
   #comments {
-    width: 600px;
+    width: 500px;
     height: 100px;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -264,11 +269,25 @@ input[type="email"]:hover {
 
   .row-last {
     margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
   }
 
   .btn {
     max-width: 200px;
     border-radius: 0;
     background-color: whitesmoke;
+    margin: 0;
+  }
+
+  .col-1 input,
+  .col-2 input,
+  .col-3 input {
+    margin-top: 1rem;
   }
 }
